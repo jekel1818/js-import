@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Tests JS</title>
+    <meta name="description" content="Basic include">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js" data-dojo-config="async: true"></script>
+
+</head>
+
+<body>
+
+<script>
+    require([
+        "counter"
+    ], function(counter){
+        console.log(counter);
+    });
+</script>
+
+
+</body>
+</html>

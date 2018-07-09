@@ -1,0 +1,23 @@
+{
+  "name": "webpack-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "npm run webpack; http-server .",
+    "webpack": "webpack-cli",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "http-server": "^0.11.1",
+    "style-loader": "^0.21.0"
+  }
+}

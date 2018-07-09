@@ -1,0 +1,22 @@
+{
+  "name": "babel-import",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run transpile; npm run exec",
+    "transpile": "babel src --out-dir lib",
+    "exec": "node lib/index.js",
+    "raw": "node raw/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.0.0-beta.52"
+  }
+}

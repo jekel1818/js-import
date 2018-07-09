@@ -1,0 +1,63 @@
+<!doctype html>
+
+<!-- https://developers.google.com/web/fundamentals/primers/modules -->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Tests JS</title>
+    <meta name="description" content="Basic include">
+
+    <link rel="modulepreload" href="./js/later.mjs">
+
+</head>
+
+<body>
+
+<script type="module">
+
+    import mod from './js/module.mjs';
+
+   // console.log(import.meta);
+
+    const test = 'hello';
+
+    (async () => {
+
+        await new Promise(resolve => setTimeout(resolve, 3000));
+
+        await import('./js/later.mjs');
+
+    })();
+
+    export default 5;
+
+</script>
+
+<script type="module">
+
+    console.log(test); // Will fail!
+
+
+</script>
+
+<script src="./js/module.mjs" type="module"></script>
+<script src="./js/transpiled-module.js" nomodule ></script>
+
+<script>
+
+    // import mod from './js/module.mjs'; has to be used inside a module!!
+
+    console.log('hello');
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
